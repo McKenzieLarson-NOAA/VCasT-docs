@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MET Stat Use Case: Performance Diagram &mdash; VCasT  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MET Stat Use Case: Reliability Diagram" href="use_case_reliability.html" />
+    <link rel="prev" title="MET Stat Use Case: Fractions Skill Score (FSS)" href="use_case_fss.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/introduction.html">Introduction to VCasT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="met_stat.html">MET Stat Component</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="met_stat_config.html">MET Stat YAML Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_cts.html">MET Stat Use Case: Categorical Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fbias_multiple_models.html">MET Stat Use Case: FBIAS Across Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fss.html">MET Stat Use Case: Fractions Skill Score (FSS)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MET Stat Use Case: Performance Diagram</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-example">Run the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yaml-configuration-explained">YAML Configuration Explained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_reliability.html">MET Stat Use Case: Reliability Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_spread_skill.html">MET Stat Use Case: Spread–Skill Relationship</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../agg/agg.html">Aggregation Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/plot.html">Plotting Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stat/stat.html">Statistics Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pairwise/pairwise.html">Pairwise Significance Testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pairwise/pairwise.html">Pairwise Significance Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">VCasT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="met_stat.html">MET Stat Component</a></li>
+      <li class="breadcrumb-item active">MET Stat Use Case: Performance Diagram</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/met_stat/use_case_performance_diagram.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="met-stat-use-case-performance-diagram">
+<h1>MET Stat Use Case: Performance Diagram<a class="headerlink" href="#met-stat-use-case-performance-diagram" title="Link to this heading"></a></h1>
+<p>This use case demonstrates how to run VCasT to compute categorical statistics for performance diagrams using MET <cite>.stat</cite> files and a YAML configuration.</p>
+<p>It uses a sample configuration file (<cite>cts.yaml</cite>) tailored to produce POD, Success Ratio, and other skill metrics for plotting.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Before running the example, make sure VCasT is installed. Follow the installation steps in
+<a class="reference internal" href="../overview/quick-start.html"><span class="doc">Quick Start Guide</span></a>.</p>
+</section>
+<section id="run-the-example">
+<h2>Run the Example<a class="headerlink" href="#run-the-example" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Clone the test repository:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NOAA-GSL/VCasT-tests
+<span class="nb">cd</span><span class="w"> </span>VCasT-tests/examples/MET/performance_diagram
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run VCasT with the provided YAML file:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcast<span class="w"> </span>cts.yaml
+</pre></div>
+</div>
+<p>This will load and process the <cite>.stat</cite> files under the <cite>./stats</cite> directory using the configuration options defined below.</p>
+</li>
+</ol>
+</section>
+<section id="yaml-configuration-explained">
+<h2>YAML Configuration Explained<a class="headerlink" href="#yaml-configuration-explained" title="Link to this heading"></a></h2>
+<p>Below is the content of <cite>cts.yaml</cite>, which configures VCasT to:</p>
+<ul class="simple">
+<li><p>Load categorical statistics (<code class="docutils literal notranslate"><span class="pre">line_type:</span> <span class="pre">cts</span></code>)</p></li>
+<li><p>Filter by model, variable, threshold, lead time, and region</p></li>
+<li><p>Aggregate the results by model, variable, and lead time</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Sample cts.yaml configuration</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">input_stat_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./stats</span>
+<span class="linenos"> 2</span><span class="nt">line_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cts</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="nt">date_column</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fcst_valid_beg&quot;</span>
+<span class="linenos"> 5</span><span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-04-29_12:00:00&quot;</span>
+<span class="linenos"> 6</span><span class="nt">end_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-05-31_12:00:00&quot;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="nt">string_filters</span><span class="p">:</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;RRFS_mem000&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">10</span><span class="w">  </span><span class="nt">fcst_var</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;APCP_01&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">11</span><span class="w">  </span><span class="nt">fcst_thresh</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&gt;0.0&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">12</span><span class="w">  </span><span class="nt">fcst_lead</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;0&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;010000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;020000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;030000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;040000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;050000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;060000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;070000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;080000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;090000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;100000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;110000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;120000&quot;</span><span class="p p-Indicator">,</span>
+<span class="linenos">13</span><span class="w">              </span><span class="s">&quot;130000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;140000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;150000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;160000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;170000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;180000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;190000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;200000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;210000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;220000&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;230000&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">14</span><span class="w">  </span><span class="nt">vx_mask</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CONUS&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nt">stat_vars</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;pody&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;far&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;csi&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;fbias&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;gss&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="nt">reformat_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos">19</span><span class="nt">output_reformat_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./filtered_output.data&quot;</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="nt">output_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos">22</span><span class="nt">output_plot_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./vars.data&quot;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="nt">aggregate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos">25</span><span class="nt">group_by</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;model&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;fcst_var&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;fcst_lead&quot;</span><span class="p p-Indicator">]</span>
+<span class="linenos">26</span><span class="nt">output_agg_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./APCP01_agg.data&quot;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h2>
+<p>An aggregated result will be saved to:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">APCP01_agg.data</span></code> -  Categorical statistics for performance diagram generation.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="use_case_fss.html" class="btn btn-neutral float-left" title="MET Stat Use Case: Fractions Skill Score (FSS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="use_case_reliability.html" class="btn btn-neutral float-right" title="MET Stat Use Case: Reliability Diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Vanderlei Vargas Jr..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

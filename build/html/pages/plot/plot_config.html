@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VCasT Plotting YAML Configuration &mdash; VCasT  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plotting Use Case: Categorical Scores" href="use_case_cts.html" />
+    <link rel="prev" title="Plotting Component" href="plot.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/introduction.html">Introduction to VCasT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../met_stat/met_stat.html">MET Stat Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../agg/agg.html">Aggregation Component</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="plot.html">Plotting Component</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">VCasT Plotting YAML Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-yaml-file">Example YAML File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-sections">Configuration Sections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general-plot-settings">General Plot Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-settings">Data Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grouping-and-filtering">Grouping and Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appearance-and-style">Appearance and Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axis-and-grid-settings">Axis and Grid Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_cts.html">Plotting Use Case: Categorical Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fbias_multiple_models.html">Plotting Use Case: FBIAS Across Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fss.html">Plotting Use Case: Fractions Skill Score (FSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_performance_diagram.html">Plotting Use Case: Performance Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_reliability.html">Plotting Use Case: Reliability Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_spread_skill.html">Plotting Use Case: Spread–Skill Relationship</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stat/stat.html">Statistics Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pairwise/pairwise.html">Pairwise Significance Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">VCasT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="plot.html">Plotting Component</a></li>
+      <li class="breadcrumb-item active">VCasT Plotting YAML Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/plot/plot_config.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vcast-plotting-yaml-configuration">
+<h1>VCasT Plotting YAML Configuration<a class="headerlink" href="#vcast-plotting-yaml-configuration" title="Link to this heading"></a></h1>
+<p>This page describes the structure and fields of the YAML file used to configure the <strong>Plotting</strong> module in VCasT. This file controls how statistical outputs are visualized through line plots, performance diagrams, or reliability diagrams.</p>
+<section id="example-yaml-file">
+<h2>Example YAML File<a class="headerlink" href="#example-yaml-file" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Sample Plotting Configuration YAML</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">plot_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">line</span>
+
+<span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-04-01_02:00:00&quot;</span><span class="w"> </span>
+<span class="nt">end_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-07-30_00:00:00&quot;</span><span class="w">    </span>
+<span class="nt">interval_hours</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w">                </span>
+
+<span class="nt">average</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">                    </span>
+<span class="nt">scale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                           </span>
+
+<span class="nt">unique</span><span class="p">:</span><span class="w">                          </span>
+<span class="nt">fcst_var</span><span class="p">:</span><span class="w">                         </span>
+
+<span class="nt">legend_style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">                </span>
+
+<span class="nt">vars</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">rmse</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/input_stats.data&quot;</span><span class="w">  </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mae</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/input_stats.data&quot;</span><span class="w">   </span>
+
+<span class="nt">plot_title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Temperature</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">2m&quot;</span><span class="w">   </span>
+<span class="nt">legend_title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Model&quot;</span><span class="w">             </span>
+
+<span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Model</span><span class="nv"> </span><span class="s">A&quot;</span><span class="w">                   </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Model</span><span class="nv"> </span><span class="s">B&quot;</span><span class="w">                  </span>
+
+<span class="nt">line_color</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="w">                       </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;green&quot;</span><span class="w">                </span>
+
+<span class="nt">line_marker</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;o&quot;</span><span class="w">                         </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="w">                         </span>
+
+<span class="nt">line_type</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-.&quot;</span><span class="w">                        </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w">                        </span>
+
+<span class="nt">line_width</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                          </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                           </span>
+
+<span class="nt">output_filename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/output.png</span><span class="w">  </span>
+
+<span class="nt">x_label</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Lead</span><span class="nv"> </span><span class="s">Time&quot;</span><span class="w">            </span>
+<span class="nt">y_label</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RMSE&quot;</span><span class="w">                 </span>
+
+<span class="nt">ylim</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-0.5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.5</span><span class="p p-Indicator">]</span><span class="w">               </span>
+<span class="nt">xlim</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">36</span><span class="p p-Indicator">]</span><span class="w">                  </span>
+
+<span class="nt">grid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">                      </span>
+
+<span class="nt">yticks</span><span class="p">:</span><span class="w">                        </span>
+<span class="nt">xticks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">3</span><span class="p p-Indicator">,</span><span class="nv">6</span><span class="p p-Indicator">,</span><span class="nv">9</span><span class="p p-Indicator">,</span><span class="nv">12</span><span class="p p-Indicator">,</span><span class="nv">15</span><span class="p p-Indicator">,</span><span class="nv">18</span><span class="p p-Indicator">,</span><span class="nv">21</span><span class="p p-Indicator">,</span><span class="nv">24</span><span class="p p-Indicator">,</span><span class="nv">27</span><span class="p p-Indicator">,</span><span class="nv">30</span><span class="p p-Indicator">,</span><span class="nv">33</span><span class="p p-Indicator">,</span><span class="nv">36</span><span class="p p-Indicator">]</span><span class="w"> </span>
+
+<span class="nt">significance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">            </span>
+<span class="nt">ci</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;rmse&#39;</span><span class="p p-Indicator">,</span><span class="s">&#39;mae&#39;</span><span class="p p-Indicator">]</span><span class="w">                      </span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="configuration-sections">
+<h2>Configuration Sections<a class="headerlink" href="#configuration-sections" title="Link to this heading"></a></h2>
+<p>The YAML file is divided into several sections:</p>
+<section id="general-plot-settings">
+<h3>General Plot Settings<a class="headerlink" href="#general-plot-settings" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>plot_type</strong>:
+Type of plot to generate. Options include:
+- <cite>line</cite>: for standard line plots
+- <cite>performance_diagram</cite>: for categorical skill scores (POD vs. Success Ratio)
+- <cite>reliability</cite>: for probabilistic reliability diagrams</p></li>
+<li><p><strong>plot_title</strong>:
+Custom title to appear at the top of the plot.</p></li>
+<li><p><strong>x_label</strong> / <strong>y_label</strong>:
+Axis labels. Optional; inferred from data if omitted.</p></li>
+<li><p><strong>output_filename</strong>:
+Path where the generated plot will be saved. File types like <cite>.png</cite>, <cite>.pdf</cite>, or <cite>.svg</cite> are supported.</p></li>
+</ul>
+</section>
+<section id="data-settings">
+<h3>Data Settings<a class="headerlink" href="#data-settings" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>vars</strong>:
+A list mapping metrics to input data paths. Each item maps a <cite>stat_name</cite> to a file containing the associated values.</p>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">vars</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">rmse</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/input_stats.data&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mae</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/input_stats.data&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>start_date</strong>, <strong>end_date</strong>:
+Optional date range filter in <cite>YYYY-MM-DD_HH:MM:SS</cite> format.</p></li>
+<li><p><strong>interval_hours</strong>:
+Forecast lead interval spacing (e.g., <cite>“1”</cite> for hourly).</p></li>
+<li><p><strong>average</strong>:
+[<cite>true</cite>, <cite>false</cite>] Whether to average over the x-axis dimension (e.g., across lead times).</p></li>
+<li><p><strong>scale</strong>:
+Numerical factor to multiply y-axis values (e.g., <cite>100</cite> to convert from fractional to percent).</p></li>
+</ul>
+</section>
+<section id="grouping-and-filtering">
+<h3>Grouping and Filtering<a class="headerlink" href="#grouping-and-filtering" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>unique</strong>:
+Column used to distinguish separate series on the plot (e.g., <cite>model</cite>, <cite>fcst_var</cite>).</p></li>
+<li><p><strong>fcst_var</strong>:
+Optionally used to restrict plotting to specific forecast variables.</p></li>
+<li><p><strong>ci</strong>:
+List of statistical variables for which confidence intervals should be drawn (e.g., <cite>[‘rmse’, ‘mae’]</cite>).</p></li>
+<li><p><strong>significance</strong>:
+[<cite>true</cite>, <cite>false</cite>] Whether to highlight statistically significant differences (requires pre-computed significance column).</p></li>
+</ul>
+</section>
+<section id="appearance-and-style">
+<h3>Appearance and Style<a class="headerlink" href="#appearance-and-style" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>legend_style</strong>:
+[<cite>true</cite>, <cite>false</cite>] Whether to draw a legend inside or outside the plotting area.</p></li>
+<li><p><strong>legend_title</strong>:
+Title displayed above the legend box.</p></li>
+<li><p><strong>labels</strong>:
+List of labels to use in the legend for each line/series.</p></li>
+<li><p><strong>line_color</strong>:
+Color names or codes for each series.</p></li>
+<li><p><strong>line_marker</strong>:
+Marker styles for each series (e.g., <cite>o</cite>, <cite>x</cite>, <cite>^</cite>).</p></li>
+<li><p><strong>line_type</strong>:
+Line styles (e.g., <cite>-</cite>, <cite>–</cite>, <cite>-.</cite>).</p></li>
+<li><p><strong>line_width</strong>:
+Line thickness values for each series.</p></li>
+</ul>
+</section>
+<section id="axis-and-grid-settings">
+<h3>Axis and Grid Settings<a class="headerlink" href="#axis-and-grid-settings" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>xlim</strong> / <strong>ylim</strong>:
+Set manual axis limits. Use a 2-element list format, e.g., <cite>[0, 36]</cite>.</p></li>
+<li><p><strong>xticks</strong> / <strong>yticks</strong>:
+Custom tick marks along x or y axes.</p></li>
+<li><p><strong>grid</strong>:
+[<cite>true</cite>, <cite>false</cite>] Whether to show grid lines in the background.</p></li>
+</ul>
+<p>—</p>
+<p>For examples of plotting configuration files and output images, see the following use cases.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plot.html" class="btn btn-neutral float-left" title="Plotting Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="use_case_cts.html" class="btn btn-neutral float-right" title="Plotting Use Case: Categorical Scores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Vanderlei Vargas Jr..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

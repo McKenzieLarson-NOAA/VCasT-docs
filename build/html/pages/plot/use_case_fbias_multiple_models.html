@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plotting Use Case: FBIAS Across Models &mdash; VCasT  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plotting Use Case: Fractions Skill Score (FSS)" href="use_case_fss.html" />
+    <link rel="prev" title="Plotting Use Case: Categorical Scores" href="use_case_cts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/introduction.html">Introduction to VCasT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../met_stat/met_stat.html">MET Stat Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../agg/agg.html">Aggregation Component</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="plot.html">Plotting Component</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="plot_config.html">VCasT Plotting YAML Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_cts.html">Plotting Use Case: Categorical Scores</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plotting Use Case: FBIAS Across Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-example">Run the Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yaml-configuration-explained">YAML Configuration Explained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fss.html">Plotting Use Case: Fractions Skill Score (FSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_performance_diagram.html">Plotting Use Case: Performance Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_reliability.html">Plotting Use Case: Reliability Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_spread_skill.html">Plotting Use Case: Spread–Skill Relationship</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stat/stat.html">Statistics Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pairwise/pairwise.html">Pairwise Significance Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">VCasT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="plot.html">Plotting Component</a></li>
+      <li class="breadcrumb-item active">Plotting Use Case: FBIAS Across Models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/plot/use_case_fbias_multiple_models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="plotting-use-case-fbias-across-models">
+<h1>Plotting Use Case: FBIAS Across Models<a class="headerlink" href="#plotting-use-case-fbias-across-models" title="Link to this heading"></a></h1>
+<p>This use case demonstrates how to use VCasT’s plotting module to generate a comparison of FBIAS scores across multiple models using pre-processed MET statistics.</p>
+<p>It uses a sample configuration file (<cite>plot.yaml</cite>) to create a line plot based on an aggregated dataset.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Before running the example, you need an input file <code class="docutils literal notranslate"><span class="pre">APCP_agg.data</span></code> created in the previous use case <a class="reference internal" href="../met_stat/use_case_fbias_multiple_models.html"><span class="doc">MET Stat Use Case: FBIAS Across Models</span></a>.</p>
+</section>
+<section id="run-the-example">
+<h2>Run the Example<a class="headerlink" href="#run-the-example" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Clone the test repository:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NOAA-GSL/VCasT-tests
+<span class="nb">cd</span><span class="w"> </span>VCasT-tests/examples/MET/fbias_multiple_models
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run VCasT with the plotting YAML file:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcast<span class="w"> </span>plot.yaml
+</pre></div>
+</div>
+<p>This will generate the FBIAS comparison plot.</p>
+</li>
+</ol>
+</section>
+<section id="yaml-configuration-explained">
+<h2>YAML Configuration Explained<a class="headerlink" href="#yaml-configuration-explained" title="Link to this heading"></a></h2>
+<p>Below is the content of <cite>plot.yaml</cite>, which configures VCasT to:</p>
+<ul class="simple">
+<li><p>Load a pre-aggregated CSV file with FBIAS values</p></li>
+<li><p>Plot <cite>fcst_lead</cite> on the x-axis and FBIAS on the y-axis</p></li>
+<li><p>Differentiate models</p></li>
+<li><p>Filter the plot to include only the <cite>fbias</cite> metric</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Sample plot.yaml configuration</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-04-29_12:00:00&quot;</span>
+<span class="linenos"> 2</span><span class="nt">end_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-05-31_12:00:00&quot;</span>
+<span class="linenos"> 3</span><span class="nt">interval_hours</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nt">average</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="linenos"> 6</span><span class="nt">scale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="nt">plot_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">line</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nt">fcst_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APCP_03</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nt">unique</span><span class="p">:</span><span class="w"> </span>
+<span class="linenos">13</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem01&quot;</span>
+<span class="linenos">14</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem02&quot;</span>
+<span class="linenos">15</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem03&quot;</span>
+<span class="linenos">16</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem04&quot;</span>
+<span class="linenos">17</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem05&quot;</span>
+<span class="linenos">18</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem06&quot;</span>
+<span class="linenos">19</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem07&quot;</span>
+<span class="linenos">20</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem08&quot;</span>
+<span class="linenos">21</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem09&quot;</span>
+<span class="linenos">22</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem10&quot;</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="nt">vars</span><span class="p">:</span>
+<span class="linenos">25</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">fbias</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./APCP_agg.data&quot;</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="nt">plot_title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FBIAS:</span><span class="nv"> </span><span class="s">APCP_03</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">mm</span><span class="nv"> </span><span class="s">(May</span><span class="nv"> </span><span class="s">2022)&quot;</span>
+<span class="linenos">28</span><span class="nt">legend_title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Model&quot;</span>
+<span class="linenos">29</span><span class="nt">labels</span><span class="p">:</span>
+<span class="linenos">30</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem01&quot;</span>
+<span class="linenos">31</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem02&quot;</span>
+<span class="linenos">32</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem03&quot;</span>
+<span class="linenos">33</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem04&quot;</span>
+<span class="linenos">34</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem05&quot;</span>
+<span class="linenos">35</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem06&quot;</span>
+<span class="linenos">36</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem07&quot;</span>
+<span class="linenos">37</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem08&quot;</span>
+<span class="linenos">38</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem09&quot;</span>
+<span class="linenos">39</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem10&quot;</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="nt">line_color</span><span class="p">:</span>
+<span class="linenos">42</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;green&quot;</span>
+<span class="linenos">43</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;blue&quot;</span>
+<span class="linenos">44</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;red&quot;</span>
+<span class="linenos">45</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;purple&quot;</span>
+<span class="linenos">46</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;orange&quot;</span>
+<span class="linenos">47</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;brown&quot;</span>
+<span class="linenos">48</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;magenta&quot;</span>
+<span class="linenos">49</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;cyan&quot;</span>
+<span class="linenos">50</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;black&quot;</span>
+<span class="linenos">51</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;gray&quot;</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span><span class="nt">line_marker</span><span class="p">:</span>
+<span class="linenos">54</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;o&quot;</span>
+<span class="linenos">55</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;x&quot;</span>
+<span class="linenos">56</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;s&quot;</span>
+<span class="linenos">57</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;d&quot;</span>
+<span class="linenos">58</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;^&quot;</span>
+<span class="linenos">59</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;v&quot;</span>
+<span class="linenos">60</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;&quot;</span>
+<span class="linenos">61</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span>
+<span class="linenos">62</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;p&quot;</span>
+<span class="linenos">63</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+<span class="linenos">64</span>
+<span class="linenos">65</span><span class="nt">line_type</span><span class="p">:</span>
+<span class="linenos">66</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-.&quot;</span>
+<span class="linenos">67</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+<span class="linenos">68</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--&quot;</span>
+<span class="linenos">69</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;:&quot;</span>
+<span class="linenos">70</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-.&quot;</span>
+<span class="linenos">71</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+<span class="linenos">72</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--&quot;</span>
+<span class="linenos">73</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;:&quot;</span>
+<span class="linenos">74</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-.&quot;</span>
+<span class="linenos">75</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+<span class="linenos">76</span>
+<span class="linenos">77</span><span class="nt">line_width</span><span class="p">:</span>
+<span class="linenos">78</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">79</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">80</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">81</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">82</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">83</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">84</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">85</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">86</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">87</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="linenos">88</span>
+<span class="linenos">89</span><span class="nt">output_filename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stat_FBIAS_APCP.png</span>
+<span class="linenos">90</span>
+<span class="linenos">91</span><span class="nt">x_label</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Lead</span><span class="nv"> </span><span class="s">Time&quot;</span>
+<span class="linenos">92</span><span class="nt">y_label</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Frequency</span><span class="nv"> </span><span class="s">Bias</span><span class="nv"> </span><span class="s">(mm)&quot;</span>
+<span class="linenos">93</span><span class="nt">ylim</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">]</span>
+<span class="linenos">94</span><span class="nt">xlim</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">11</span><span class="p p-Indicator">]</span>
+<span class="linenos">95</span><span class="nt">grid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos">96</span><span class="nt">yticks</span><span class="p">:</span><span class="w">   </span>
+<span class="linenos">97</span><span class="nt">xticks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="nv">3</span><span class="p p-Indicator">,</span><span class="nv">4</span><span class="p p-Indicator">,</span><span class="nv">5</span><span class="p p-Indicator">,</span><span class="nv">6</span><span class="p p-Indicator">,</span><span class="nv">7</span><span class="p p-Indicator">,</span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="nv">9</span><span class="p p-Indicator">,</span><span class="nv">10</span><span class="p p-Indicator">,</span><span class="nv">11</span><span class="p p-Indicator">]</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h2>
+<p>The generated plot will be saved to the location specified by <cite>output_filename</cite>, such as <code class="docutils literal notranslate"><span class="pre">stat_FBIAS_APCP.png</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/stat_FBIAS_APCP.png"><img alt="Example plot" class="align-center" src="../../_images/stat_FBIAS_APCP.png" style="width: 600px;" />
+</a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="use_case_cts.html" class="btn btn-neutral float-left" title="Plotting Use Case: Categorical Scores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="use_case_fss.html" class="btn btn-neutral float-right" title="Plotting Use Case: Fractions Skill Score (FSS)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Vanderlei Vargas Jr..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

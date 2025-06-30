@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MET Stat YAML Configuration &mdash; VCasT  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MET Stat Use Case: Categorical Scores" href="use_case_cts.html" />
+    <link rel="prev" title="MET Stat Component" href="met_stat.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/introduction.html">Introduction to VCasT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="met_stat.html">MET Stat Component</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MET Stat YAML Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-yaml-file">Example YAML File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-sections">Configuration Sections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#input-and-line-type-settings">Input and Line Type Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#date-settings">Date Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtering-options">Filtering Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-options">Output Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aggregation-options">Aggregation Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_cts.html">MET Stat Use Case: Categorical Scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fbias_multiple_models.html">MET Stat Use Case: FBIAS Across Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_fss.html">MET Stat Use Case: Fractions Skill Score (FSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_performance_diagram.html">MET Stat Use Case: Performance Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_reliability.html">MET Stat Use Case: Reliability Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_case_spread_skill.html">MET Stat Use Case: Spread–Skill Relationship</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../agg/agg.html">Aggregation Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/plot.html">Plotting Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stat/stat.html">Statistics Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pairwise/pairwise.html">Pairwise Significance Testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pairwise/pairwise.html">Pairwise Significance Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">VCasT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="met_stat.html">MET Stat Component</a></li>
+      <li class="breadcrumb-item active">MET Stat YAML Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/met_stat/met_stat_config.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="met-stat-yaml-configuration">
+<h1>MET Stat YAML Configuration<a class="headerlink" href="#met-stat-yaml-configuration" title="Link to this heading"></a></h1>
+<p>This page describes the structure and fields of the YAML file used to configure the <strong>MET Stat</strong> module in VCasT. This file controls how <cite>.stat</cite> files are read, filtered, and processed to extract and aggregate forecast verification statistics.</p>
+<section id="example-yaml-file">
+<h2>Example YAML File<a class="headerlink" href="#example-yaml-file" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Sample MET Stat Configuration YAML</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input_stat_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/MET/stats</span>
+<span class="nt">line_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cts</span>
+
+<span class="nt">date_column</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fcst_valid_beg</span>
+<span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2022-05-01_00:00:00&quot;</span>
+<span class="nt">end_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2022-05-08_00:00:00&quot;</span>
+
+<span class="nt">string_filters</span><span class="p">:</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem01&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;RRFS_GDAS_GF.SPP.SPPT_mem02&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">fcst_var</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;APCP_03&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">fcst_thresh</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&gt;0.0&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">fcst_lead</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;030000&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;060000&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;090000&#39;</span><span class="p p-Indicator">]</span>
+
+<span class="nt">reformat_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">output_reformat_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/filtered_output.data&quot;</span>
+
+<span class="nt">output_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">stat_vars</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;fbias&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;gss&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">output_plot_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/output.data&quot;</span>
+
+<span class="nt">aggregate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">group_by</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;fcst_lead&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">output_agg_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/output_agg.data&quot;</span>
+<span class="nt">ci</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="configuration-sections">
+<h2>Configuration Sections<a class="headerlink" href="#configuration-sections" title="Link to this heading"></a></h2>
+<p>The YAML file is divided into several sections:</p>
+<section id="input-and-line-type-settings">
+<h3>Input and Line Type Settings<a class="headerlink" href="#input-and-line-type-settings" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>input_stat_folder</strong>:
+Path to the directory containing MET <code class="docutils literal notranslate"><span class="pre">.stat</span></code> files. All files must be located within a single folder to allow the tool to scan and process them collectively. Recursive search or multiple paths are not supported.</p></li>
+<li><p><strong>line_type</strong>:
+Specifies the MET line type to filter (e.g., <code class="docutils literal notranslate"><span class="pre">cnt</span></code>, <code class="docutils literal notranslate"><span class="pre">cts</span></code>, <code class="docutils literal notranslate"><span class="pre">ecnt</span></code>, etc.). This setting determines which records are extracted and must be compatible with the metrics listed in <code class="docutils literal notranslate"><span class="pre">stat_vars</span></code>. Only variables valid for the chosen line type will be available.</p>
+<p>For a full list of supported line types and their associated statistics, see the <a class="reference external" href="https://metplus.readthedocs.io/projects/met/en/latest/Users_Guide/point-stat.html#output-line-types">MET User’s Guide - Point-Stat Output Line Types</a>.</p>
+</li>
+</ul>
+</section>
+<section id="date-settings">
+<h3>Date Settings<a class="headerlink" href="#date-settings" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>date_column</strong>: Column used to apply the date filter (e.g., <cite>fcst_valid_beg</cite>).</p></li>
+<li><p><strong>start_date</strong> / <strong>end_date</strong>: Time range to include data for processing (<cite>YYYY-MM-DD_HH:MM:SS</cite> format).</p></li>
+</ul>
+</section>
+<section id="filtering-options">
+<h3>Filtering Options<a class="headerlink" href="#filtering-options" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>string_filters</strong>: Filter rows by allowed string values in specific columns. Examples include:</p>
+<ul>
+<li><p><strong>model</strong>: List of models and/or ensemble members, e.g., <code class="docutils literal notranslate"><span class="pre">[ens0,</span> <span class="pre">ens1]</span></code>.</p></li>
+<li><p><strong>fcst_var</strong>: List of forecast variables, e.g., <code class="docutils literal notranslate"><span class="pre">[REFC,</span> <span class="pre">TMP]</span></code>.</p></li>
+<li><p><strong>fcst_lead</strong>: List of forecast lead times in <code class="docutils literal notranslate"><span class="pre">HH0000</span></code> format, e.g., <code class="docutils literal notranslate"><span class="pre">[010000,</span> <span class="pre">020000]</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="output-options">
+<h3>Output Options<a class="headerlink" href="#output-options" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>reformat_file</strong>: [<cite>true</cite>, <cite>false</cite>] writes the fully filtered DataFrame to file (with all columns associated to the chosen line type option).</p></li>
+<li><p><strong>output_reformat_file</strong>: Path to save the filtered dataset.</p></li>
+<li><p><strong>stat_vars</strong>: List of variables to extract (e.g., <cite>fbias</cite>, <cite>gss</cite>).</p></li>
+<li><p><strong>output_file</strong>: [<cite>true</cite>, <cite>false</cite>] exports selected statistical variables.</p></li>
+<li><p><strong>output_plot_file</strong>: Path to save the extracted metric values.</p></li>
+</ul>
+</section>
+<section id="aggregation-options">
+<h3>Aggregation Options<a class="headerlink" href="#aggregation-options" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>aggregate</strong>: [<cite>true</cite>, <cite>false</cite>] whether to compute group statistics (mean, CI).</p></li>
+<li><p><strong>group_by</strong>: List of column(s) to group by (e.g., <cite>[fcst_lead, model]</cite>).</p></li>
+<li><p><strong>output_agg_file</strong>: Path to save aggregated output.</p></li>
+<li><p><strong>ci</strong>: [<cite>true</cite>, <cite>false</cite>] whether to compute confidence intervals for each metric.</p></li>
+</ul>
+<p>—</p>
+<p>For a working example or template, see the following use cases.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="met_stat.html" class="btn btn-neutral float-left" title="MET Stat Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="use_case_cts.html" class="btn btn-neutral float-right" title="MET Stat Use Case: Categorical Scores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Vanderlei Vargas Jr..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
