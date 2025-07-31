@@ -100,7 +100,11 @@ This also pulls in any optional submodules (e.g., examples and tests).
 -------------
 Learn more about the different VCasT components:
 - :doc:`MET Stat <../met_stat/met_stat>`
+
 - :doc:`Aggregation <../agg/agg>`
+
 - :doc:`Plotting <../plot/plot>`
+
 - :doc:`Statistics <../stat/stat>`
+
 - :doc:`Pairwise Significance Testing <../pariwise/pairwise>`
