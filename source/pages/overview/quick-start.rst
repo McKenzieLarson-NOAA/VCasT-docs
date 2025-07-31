@@ -104,4 +104,3 @@ Learn more about the different VCasT components:
 - :doc:`Plotting <../plot/plot>`
 - :doc:`Statistics <../stat/stat>`
 - :doc:`Pairwise Significance Testing <../pariwise/pairwise>`
-- Read the :doc:`Introduction <introduction>` to understand what VCasT can do.
