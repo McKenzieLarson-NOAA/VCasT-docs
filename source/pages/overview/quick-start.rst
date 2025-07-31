@@ -99,6 +99,7 @@ This also pulls in any optional submodules (e.g., examples and tests).
 6. Next Steps
 -------------
 Learn more about the different VCasT components:
+
 - :doc:`MET Stat <../met_stat/met_stat>`
 
 - :doc:`Aggregation <../agg/agg>`
